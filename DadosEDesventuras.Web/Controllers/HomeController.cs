@@ -10,19 +10,23 @@ namespace DadosEDesventuras.Web.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "Dados&Desventuras";
+            ViewBag.Message = "Ajudando Mestres e jogadores a rolarem seus acertos Cliticos";
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Title = "Dados&Desventuras";
+            ViewBag.Message = "Ajudando Mestres e jogadores a rolarem seus acertos Cliticos";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Title = "Contato";
+            ViewBag.Message = "Contato.";
 
             return View();
         }
