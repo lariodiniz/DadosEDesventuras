@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DadosEDesventura.BandoDeDados {
+namespace DadosEDesventura.BancoDeDados {
     
     
     /// <summary>

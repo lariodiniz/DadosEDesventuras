@@ -1,21 +1,30 @@
-﻿using System.Data.Entity;
+﻿using DadosEDesventura.BancoDeDados.Map;
+using DadosEDesventuras.BancoDeDados.Modelos;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace DadosEDesventura.BandoDeDados
+namespace DadosEDesventura.BancoDeDados
 {
     public class Contexto : DbContext
     {
         //Define tabelas.      
-        //public virtual DbSet<CP0001> CP0001 { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
 
       
         public Contexto(string strincConexao) : base(strincConexao)
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Contexto, Configuration>());
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<Contexto, Configuration>());
         }
-       
+
+        public Contexto() : base()
+        {
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<Contexto, Configuration>());
+        }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -44,7 +53,7 @@ namespace DadosEDesventura.BandoDeDados
 
             //Constroi Tabelas
             //Controles
-          //  modelBuilder.Configurations.Add(new CP0001Map());
+            modelBuilder.Configurations.Add(new UsuarioMap());
         }
     }
 }

@@ -7,7 +7,7 @@
     <ProjectGuid>{447803D8-BB0E-464A-BE6E-BFCE2756AD58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DadosEDesventura.BandoDeDados</RootNamespace>
+    <RootNamespace>DadosEDesventura.BancoDeDados</RootNamespace>
     <AssemblyName>DadosEDesventura.BandoDeDados</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -48,11 +48,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DED.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DED.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Map\UsuarioMap.cs" />
+    <Compile Include="Migrations\201711011948508_Usuarios.cs" />
+    <Compile Include="Migrations\201711011948508_Usuarios.Designer.cs">
+      <DependentUpon>201711011948508_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -79,10 +87,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="Map\" />
-    <Folder Include="Modelos\" />
+    <EmbeddedResource Include="Migrations\201711011948508_Usuarios.resx">
+      <DependentUpon>201711011948508_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

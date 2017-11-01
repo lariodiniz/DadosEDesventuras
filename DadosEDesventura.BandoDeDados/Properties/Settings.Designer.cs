@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DadosEDesventura.BandoDeDados.Properties {
+namespace DadosEDesventura.BancoDeDados.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
